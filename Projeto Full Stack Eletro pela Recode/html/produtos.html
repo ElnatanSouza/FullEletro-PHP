@@ -29,16 +29,18 @@
         <p class="paragrafoCateg"> Categorias </p>
         <br>
         <ul class="lista">
-            <li> Geladeiras (3) </li>
-            <li> Fogões (2) </li>
-            <li> Microondas (3) </li>
-            <li> Lavadoura de roupa (2) </li>
-            <li> Lava-louças (2) </li>
+            <li onclick="exibirTodos()"> Todos (12) </li>
+            <li onclick="exibir('geladeira')"> Geladeiras (3) </li>
+            <li onclick="exibir('fogao')"> Fogões (2) </li>
+            <li onclick="exibir('microondas')"> Microondas (3) </li>
+            <li onclick="exibir('lavaRoupa')"> Lavadoura de roupa (2) </li>
+            <li onclick="exibir('lavaLouca')"> Lava-louças (2) </li>
         </ul>
     </aside>
     <div class="produtos">
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/geladeira.jpg" />
+        <div class="prod" id="geladeira">
+            <img class="tamanhoprod" src="../imagens/geladeira.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p>Geladeira/Refrigerador Side By Side <br> Frost Free Inox Electrolux - 127V (504L)</p>
             <br>
@@ -47,8 +49,9 @@
             <p class="preco"> R$ 4.599,07 </p>
             <hr />
         </div>
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/geladeira1.jpg" />
+        <div class="prod" id="geladeira">
+            <img class="tamanhoprod" src="../imagens/geladeira1.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Refrigerador Electrolux Duplex DC35A - 127V (260L) </p>
             <br>
@@ -57,8 +60,9 @@
             <p class="preco"> R$1.449,90 </p>
             <hr>
         </div>
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/geladeira2.jpg" />
+        <div class="prod" id="geladeira">
+            <img class="tamanhoprod" src="../imagens/geladeira2.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Refrigerador Consul Biplex - 127V (334L) </p>
             <br>
@@ -67,8 +71,10 @@
             <p class="preco"> R$1.689,00 </p>
             <hr />
         </div>
-        <div class="prod">
-            <img class="tamanhoprod" class="fogao" src="../imagens/fogao.jpg" />
+        <!-- Começo dos Fogões -->
+        <div class="prod" id="fogao">
+            <img class="tamanhoprod" class="fogao" src="../imagens/fogao.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Fogão 05 Bocas Mesa de Vidro - Electrolux - 127V </p>
             <br>
@@ -78,9 +84,10 @@
             <hr />
         </div>
         <div>
-            <div class="prod">
-                <!-- Segundo Fogão -->
-                <img class="tamanhoprod" src="../imagens/fogao1.jpg" />
+            <!-- Segundo Fogão -->
+            <div class="prod" id="fogao">
+                <img class="tamanhoprod" src="../imagens/fogao1.jpg" width="120px" onmouseover="destaque(this)"
+                    onmouseout="redimensiona(this)" />
                 <br>
                 <p> Fogão 4 Bocas Electrolux - Automático com Forno (70L) </p>
                 <br>
@@ -89,9 +96,10 @@
                 <p class="preco"> R$ 1.357,67 </p>
                 <hr>
             </div>
-            <div class="prod">
-                <!-- Fim dos Fogões e começo dos microondas -->
-                <img class="tamanhoprod" src="../imagens/microondas.jpg" />
+            <!-- Fim dos Fogões e começo dos microondas -->
+            <div class="prod" id="microondas">
+                <img class="tamanhoprod" src="../imagens/microondas.jpg" width="120px" onmouseover="destaque(this)"
+                    onmouseout="redimensiona(this)" />
                 <br>
                 <p> Forno de Micro-ondas - Prata - 127V (27 L) </p>
                 <br>
@@ -101,8 +109,9 @@
                 <hr>
             </div>
             <!-- Segundo microondas -->
-            <div class="prod">
-                <img class="tamanhoprod" src="../imagens/microondas1.jpg" />
+            <div class="prod" id="microondas">
+                <img class="tamanhoprod" src="../imagens/microondas1.jpg" width="120px" onmouseover="destaque(this)"
+                    onmouseout="redimensiona(this)" />
                 <br>
                 <p> Micro-ondas Philco - 127V (30L) </p>
                 <br>
@@ -112,8 +121,9 @@
                 <hr />
             </div>
             <!-- Terceiro Microondas -->
-            <div class="prod">
-                <img class="tamanhoprod" src="../imagens/microondas2.jpg" />
+            <div class="prod" id="microondas">
+                <img class="tamanhoprod" src="../imagens/microondas2.jpg" width="120px" onmouseover="destaque(this)"
+                    onmouseout="redimensiona(this)" />
                 <br>
                 <p> Micro-ondas Brastemp Inox - 127V (20L) </p>
                 <br>
@@ -124,8 +134,9 @@
             </div>
         </div>
         <!-- Fim dos microondas e inicio das Lavadouras de roupas -->
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/lavroupa.jpg" />
+        <div class="prod" id="lavaRoupa">
+            <img class="tamanhoprod" src="../imagens/lavroupa.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Lavadora Electrolux - Branca - 220V (13 Kg) </p>
             <br>
@@ -135,8 +146,9 @@
             <hr />
         </div>
         <!-- Segunda Lavadoura de roupa -->
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/lavroupa1.jpg" />
+        <div class="prod" id="lavaRoupa">
+            <img class="tamanhoprod" src="../imagens/lavroupa1.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Lavadora de Roupas Brastemp com Turbo<br> Agitação - 220V (11kg) </p>
 
@@ -147,8 +159,9 @@
             <hr>
         </div>
         <!-- Fim das Lavadouras de roupas e começo das de Louças -->
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/lavlouça.jpg" />
+        <div class="prod" id="lavaLouca">
+            <img class="tamanhoprod" src="../imagens/lavlouça.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Lava-Louças Inox 14 Serviços - 220V </p>
             <br>
@@ -157,10 +170,10 @@
             <p class="preco"> R$ 2.233,25 </p>
             <hr />
         </div>
-
         <!-- Segunda Lava-louça -->
-        <div class="prod">
-            <img class="tamanhoprod" src="../imagens/lavlouça1.jpg" />
+        <div class="prod" id="lavaLouca">
+            <img class="tamanhoprod" src="../imagens/lavlouça1.jpg" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
             <br>
             <p> Lava-louças 8 Serviços Brastemp Ative! - 220V </p>
             <br>
