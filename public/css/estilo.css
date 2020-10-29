@@ -2,51 +2,64 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}    
+} 
+
 body {
     font-family: Calibri, Arial, Helvetica, sans-serif;
-}    
+}
+
 h2 {
     color: blue;
 }
+
 p {        
     font-style: italic;
     margin: 10px;
 }
+
 h3 {
     margin: 10px;
 }
+
 h4 {
     color: red;        
     text-align: center;
 }
+
 .bem_vindo {
     margin: 10px;
 }
+
 .menu {
     display: inline-block;
     background-color: red;
     width: 1365px;
     height: 5%;     
 } 
+
 .menu img {
     width: 200px;
 }
+
 .menu a {
     color: white;
     text-decoration: none;        
     font-size: 20px;
     margin: 100px;
 }
+
 nav .nossosprods {
     vertical-align: 45px;
 }
+
 nav .loja{
     vertical-align: 45px;
 }
+
 nav .contato {
     vertical-align: 45px;
 }
+
 .categorias {
     display: inline-block;
     vertical-align: bottom;
@@ -54,90 +67,111 @@ nav .contato {
     height: 900px;
     margin: 0px 0px 0px 20px;
 }
+
 .paragrafoCateg{
     font-weight: bolder;
     font-size: 25px;
     margin: 0px 0px 0px 0px;
 }
+
 .lista {
     list-style-type: none;
     cursor: pointer;
 }
+
 .produtos {
     display: inline-block;
     height: 900px;
     width: 80%;
 }
+
 .tamanhoprod {
     cursor: zoom-in;
 }
+
 .prod {
     display: inline-block;
     width: 23%;
     text-align: center;
     margin: 15px 0px 0px 15px;
 }
+
 .preco {
     color: red;
 }
+
 .strike {
     text-decoration: line-through;
- }
+}
+
 .direitos_autorais {        
     font-style: italic;
     font-size: 12px;
     text-align: center;
 }
+
 .contato {
     color: red;        
     text-align:left;
     margin: 10px;
     width: 100%;
 }
+
 .mensagem {
     color: red;
     margin: 10px;
     text-align: left;
 }
+
 .botao {
     color: white;
-    border-radius: 10px 0px 10px 0px;
+    border-radius: 7px 7px 7px 7px;
     width: 100px;
     padding: 0.45%;
-    border: 0;
+    border: 0 solid;
     margin-left: 400px;
-    background-image: linear-gradient(to right, gray, red, gray);
+    background-image: linear-gradient(to right, rgb(184, 41, 41), rgb(202, 43, 43), rgb(172, 51, 51));
     cursor: pointer;
 }
+
 .rodape {
     text-align: center;
 }
+
 .forma_pagamento {
     color: red;
 }
+
 .imgPag {
     width: 25%;
 }
+
 .lojas {
     border: 0px;
     width: 100%;
 }
+
 .nossasLojas {
     text-align: center;
     font-size: 26px;
     color: red;
 }
+
 .faleConos {
     font-size: 26px;
     color: red;
 }
+
 .nome {
     width: 500px;
 }
+
 .email {
     width: 500px;
 }
+
 .textarea {
     width: 500px;
     height: 150px;
 }
+
