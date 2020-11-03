@@ -1,177 +1,164 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-} 
-
-body {
-    font-family: Calibri, Arial, Helvetica, sans-serif;
+main h2 {
+  color: #a1057f;
 }
 
-h2 {
-    color: blue;
-}
-
-p {        
-    font-style: italic;
-    margin: 10px;
+p {
+  font-style: italic;
+  margin: 10px;
 }
 
 h3 {
-    margin: 10px;
+  margin: 10px;
 }
 
-h4 {
-    color: red;        
-    text-align: center;
+
+#pesquisa {
+  padding-left: 18rem;
+}
+
+@media (max-width: 1024px) {
+  #pesquisa {
+    padding: 1.2rem;
+  }
+}
+
+form .botao-nav {
+  border-radius: 0px 8px 8px 0px;
+  color: black;
+}
+
+form .form-control {
+  border-radius: 8px 0px 0px 8px;
+}
+
+nav .navbar {
+  background-color: aquamarine;
+}
+
+.navbar img {
+  width: 16vw;
 }
 
 .bem_vindo {
-    margin: 10px;
-}
-
-.menu {
-    display: inline-block;
-    background-color: red;
-    width: 1365px;
-    height: 5%;     
-} 
-
-.menu img {
-    width: 200px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;        
-    font-size: 20px;
-    margin: 100px;
-}
-
-nav .nossosprods {
-    vertical-align: 45px;
-}
-
-nav .loja{
-    vertical-align: 45px;
-}
-
-nav .contato {
-    vertical-align: 45px;
+  margin: 10px;
 }
 
 .categorias {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 14%;
-    height: 900px;
-    margin: 0px 0px 0px 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 14%;
+  height: 900px;
+  margin: 0px 0px 0px 20px;
 }
 
-.paragrafoCateg{
-    font-weight: bolder;
-    font-size: 25px;
-    margin: 0px 0px 0px 0px;
+.paragrafoCateg {
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
 }
 
 .lista {
-    list-style-type: none;
-    cursor: pointer;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 .produtos {
-    display: inline-block;
-    height: 900px;
-    width: 80%;
+  display: inline-block;
+  height: 900px;
+  width: 80%;
 }
 
 .tamanhoprod {
-    cursor: zoom-in;
+  cursor: zoom-in;
 }
 
 .prod {
-    display: inline-block;
-    width: 23%;
-    text-align: center;
-    margin: 15px 0px 0px 15px;
+  display: inline-block;
+  width: 23%;
+  text-align: center;
+  margin: 15px 0px 0px 15px;
 }
 
 .preco {
-    color: red;
+  color: red;
 }
 
 .strike {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-.direitos_autorais {        
-    font-style: italic;
-    font-size: 12px;
-    text-align: center;
+.direitos_autorais {
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
 }
 
 .contato {
-    color: red;        
-    text-align:left;
-    margin: 10px;
-    width: 100%;
+  color: #a1057f;
+  text-align: left;
+  margin: 10px;
+  width: 100%;
 }
 
 .mensagem {
-    color: red;
-    margin: 10px;
-    text-align: left;
+  color: #a1057f;
+  margin: 10px;
+  text-align: left;
 }
 
 .botao {
-    color: white;
-    border-radius: 7px 7px 7px 7px;
-    width: 100px;
-    padding: 0.45%;
-    border: 0 solid;
-    margin-left: 400px;
-    background-image: linear-gradient(to right, rgb(184, 41, 41), rgb(202, 43, 43), rgb(172, 51, 51));
-    cursor: pointer;
+  color: white;
+  border-radius: 7px 7px 7px 7px;
+  width: 100px;
+  padding: 0.45%;
+  border: 0 solid;
+  margin-left: 400px;
+  background-image: linear-gradient(
+    to right,
+    rgb(176, 35, 211),
+    #a1057f,
+    rgb(102, 14, 129)
+  );
+  cursor: pointer;
 }
 
-.rodape {
-    text-align: center;
+#rodape {
+  text-align: center;
 }
 
-.forma_pagamento {
-    color: red;
+#forma_pagamento {
+  color: red;
 }
 
-.imgPag {
-    width: 25%;
+#imgPag {
+  width: 25%;
 }
 
 .lojas {
-    border: 0px;
-    width: 100%;
+  border: 0px;
+  width: 100%;
 }
 
 .nossasLojas {
-    text-align: center;
-    font-size: 26px;
-    color: red;
+  text-align: center;
+  font-size: 26px;
+  color: #a1057f;
 }
 
 .faleConos {
-    font-size: 26px;
-    color: red;
+  font-size: 26px;
+  color: #a1057f;
 }
 
 .nome {
-    width: 500px;
+  width: 500px;
 }
 
 .email {
-    width: 500px;
+  width: 500px;
 }
 
 .textarea {
-    width: 500px;
-    height: 150px;
+  width: 500px;
+  height: 150px;
 }
-
