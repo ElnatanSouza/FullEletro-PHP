@@ -156,3 +156,16 @@ nav .navbar {
   width: 500px;
   height: 150px;
 }
+
+@media (max-width: 1024px) {
+  #fale_form {
+    width: 290px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #fale_botao {
+    width: 25vw;
+    margin-left: 1px;
+  }
+}

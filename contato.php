@@ -48,20 +48,20 @@ include_once('conexaosql.php');
         </center>
 
         <br> <br> <br>
-        <form method="post" action="">
+        <form method="post" action="#">
             <h4 class="contato">
                 Nome Completo: <br>
-                <input class="nome" type="text" name="nome" placeholder="Digite aqui seu nome">
+                <input id="fale_form" class="nome" type="text" name="nome" placeholder="Digite aqui seu nome">
                 <br> Email:
                 <br>
-                <input class="email" type="email" name="email" placeholder="Digite aqui seu email">
+                <input id="fale_form" class="email" type="email" name="email" placeholder="Digite aqui seu email">
                 <br>
             </h4>
             <h4 class="mensagem">
                 Mensagem: <br>
-                <textarea class="textarea" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br>
+                <textarea id="fale_form" class="textarea" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br>
 
-                <input class="botao" type="submit" value="Enviar"> <br>
+                <input id="fale_botao" class="botao" type="submit" value="Enviar"> <br>
             </h4>
 
         </form>
