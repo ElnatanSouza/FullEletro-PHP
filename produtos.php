@@ -1,3 +1,18 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "fulleletro";
+
+    // Criando conexão com o BD!
+    $conn = mysqli_connect($servername, $username, $password, $database);
+
+    // Verificando a conexão
+    if (!$conn){
+        die("A conexão com o Banco de Dados falhou: " . mysqli_connect_error());
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +35,7 @@
     <?php 
         include_once('menu.html');
     ?>
-    
+
     <div class="container-fluid">
         <br> <br>
 
@@ -37,158 +52,39 @@
                 <li onclick="exibir('lavaLouca')"> Lava-louças (2) </li>
             </ul>
         </aside>
-        <div class="produtos">
-            <div class="prod" id="geladeira">
-                <img class="tamanhoprod" src="./public/img/geladeira.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p>Geladeira/Refrigerador Side By Side <br> Frost Free Inox Electrolux - 127V (504L)</p>
-                <br>
-                <p class="strike"> R$7.789,05 </p>
-                <br>
-                <p class="preco"> R$ 4.599,07 </p>
-                <hr />
-            </div>
-            <div class="prod" id="geladeira">
-                <img class="tamanhoprod" src="./public/img/geladeira1.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Refrigerador Electrolux Duplex DC35A - 127V (260L) </p>
-                <br>
-                <p class="strike"> R$1.759,32 </p>
-                <br>
-                <p class="preco"> R$1.449,90 </p>
-                <hr>
-            </div>
-            <div class="prod" id="geladeira">
-                <img class="tamanhoprod" src="./public/img/geladeira2.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Refrigerador Consul Biplex - 127V (334L) </p>
-                <br>
-                <p class="strike"> R$1.849,01 </p>
-                <br>
-                <p class="preco"> R$1.689,00 </p>
-                <hr />
-            </div>
-            <!-- Começo dos Fogões -->
-            <div class="prod" id="fogao">
-                <img class="tamanhoprod" class="fogao" src="./public/img/fogao.jpg" width="120px"
-                    onmouseover="destaque(this)" onmouseout="redimensiona(this)" />
-                <br>
-                <p> Fogão 05 Bocas Mesa de Vidro - Electrolux - 127V </p>
-                <br>
-                <p class="strike"> R$2.157,38 </p>
-                <br>
-                <p class="preco"> R$1.753,84</p>
-                <hr />
-            </div>
-            <div>
-                <!-- Segundo Fogão -->
-                <div class="prod" id="fogao">
-                    <img class="tamanhoprod" src="./public/img/fogao1.jpg" width="120px" onmouseover="destaque(this)"
-                        onmouseout="redimensiona(this)" />
-                    <br>
-                    <p> Fogão 4 Bocas Electrolux - Automático com Forno (70L) </p>
-                    <br>
-                    <p class="strike"> R$1.659,39 </p>
-                    <br>
-                    <p class="preco"> R$ 1.357,67 </p>
-                    <hr>
-                </div>
-                <!-- Fim dos Fogões e começo dos microondas -->
-                <div class="prod" id="microondas">
-                    <img class="tamanhoprod" src="./public/img/microondas.jpg" width="120px"
-                        onmouseover="destaque(this)" onmouseout="redimensiona(this)" />
-                    <br>
-                    <p> Forno de Micro-ondas - Prata - 127V (27 L) </p>
-                    <br>
-                    <p class="strike"> R$579,67 </p>
-                    <br>
-                    <p class="preco">R$493,28</p>
-                    <hr>
-                </div>
-                <!-- Segundo microondas -->
-                <div class="prod" id="microondas">
-                    <img class="tamanhoprod" src="./public/img/microondas1.jpg" width="120px"
-                        onmouseover="destaque(this)" onmouseout="redimensiona(this)" />
-                    <br>
-                    <p> Micro-ondas Philco - 127V (30L) </p>
-                    <br>
-                    <p class="strike"> R$563,67 </p>
-                    <br>
-                    <p class="preco"> R$498,20 </p>
-                    <hr />
-                </div>
-                <!-- Terceiro Microondas -->
-                <div class="prod" id="microondas">
-                    <img class="tamanhoprod" src="./public/img/microondas2.jpg" width="120px"
-                        onmouseover="destaque(this)" onmouseout="redimensiona(this)" />
-                    <br>
-                    <p> Micro-ondas Brastemp Inox - 127V (20L) </p>
-                    <br>
-                    <p class="strike"> R$554,67 </p>
-                    <br>
-                    <p class="preco">R$489,27</p>
-                    <hr />
-                </div>
-            </div>
-            <!-- Fim dos microondas e inicio das Lavadouras de roupas -->
-            <div class="prod" id="lavaRoupa">
-                <img class="tamanhoprod" src="./public/img/lavroupa.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Lavadora Electrolux - Branca - 220V (13 Kg) </p>
-                <br>
-                <p class="strike"> R$ 2.084,62 </p>
-                <br>
-                <p class="preco">R$ 1.489,99</p>
-                <hr />
-            </div>
-            <!-- Segunda Lavadoura de roupa -->
-            <div class="prod" id="lavaRoupa">
-                <img class="tamanhoprod" src="./public/img/lavroupa1.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Lavadora de Roupas Brastemp com Turbo<br> Agitação - 220V (11kg) </p>
 
-                <br>
-                <p class="strike"> R$ 2.056,97 </p>
-                <br>
-                <p class="preco"> R$ 1.719,99 </p>
-                <hr>
-            </div>
-            <!-- Fim das Lavadouras de roupas e começo das de Louças -->
-            <div class="prod" id="lavaLouca">
-                <img class="tamanhoprod" src="./public/img/lavlouça.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Lava-Louças Inox 14 Serviços - 220V </p>
-                <br>
-                <p class="strike"> R$3.548,79 </p>
-                <br>
-                <p class="preco"> R$ 2.233,25 </p>
-                <hr />
-            </div>
-            <!-- Segunda Lava-louça -->
-            <div class="prod" id="lavaLouca">
-                <img class="tamanhoprod" src="./public/img/lavlouça1.jpg" width="120px" onmouseover="destaque(this)"
-                    onmouseout="redimensiona(this)" />
-                <br>
-                <p> Lava-louças 8 Serviços Brastemp Ative! - 220V </p>
-                <br>
-                <p class="strike"> R$2.368,79 </p>
-                <br>
-                <p class="preco"> R$ 1.804,85 </p>
-                <hr />
-            </div>
+        <?php
+    $sql = "select * from produtos";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($rows = $result->fetch_assoc()) {
+    ?>
+        <div class="prod" id="<?php echo $rows['categoria']; ?>">
+
+            <img class="tamanhoprod" src="<?php echo $rows['imagem']; ?>" width="120px" onmouseover="destaque(this)"
+                onmouseout="redimensiona(this)" />
+            <br />            
+            <p> <?php echo $rows['descricao_produto']; ?> </p>
+            <br />
+            <p class="strike"> R$ <?php echo $rows['preco_real']; ?> </p>
+            <br />
+            <p class="preco"> R$ <?php echo $rows['preco_desc']; ?> </p>
+            <hr />
 
         </div>
 
-        <br> <br> <br> <br>
+        <?php
+        }
+    } 
+    else {
+        echo "Nenhum produto cadastrado";
+    }
+    ?>
+        <br /> <br />
         <hr>
 
-        <br> <br> <br> <br>
+        <br /> <br /> <br /> <br />
         <!-- Rodapé-->
         <?php
             include_once('rodape.html');    

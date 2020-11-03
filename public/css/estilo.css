@@ -62,12 +62,6 @@ nav .navbar {
   cursor: pointer;
 }
 
-.produtos {
-  display: inline-block;
-  height: 900px;
-  width: 80%;
-}
-
 .tamanhoprod {
   cursor: zoom-in;
 }
@@ -111,7 +105,7 @@ nav .navbar {
   border-radius: 7px 7px 7px 7px;
   width: 100px;
   padding: 0.45%;
-  border: 0 solid;
+  border: 0 solid black;
   margin-left: 400px;
   background-image: linear-gradient(
     to right,
