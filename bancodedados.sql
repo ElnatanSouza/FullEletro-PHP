@@ -13,7 +13,7 @@ PRIMARY KEY (id)
 
 ) default charset = utf8;
 
-create table produtos(
+create table produtos (
 
 id_produto int not null primary key auto_increment,
 categoria varchar(60) not null,
