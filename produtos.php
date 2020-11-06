@@ -43,13 +43,13 @@
         <aside class="categorias">
             <p class="paragrafoCateg"> Categorias </p>
             <br>
-            <ul class="lista">
-                <li onclick="exibirTodos()"> Todos (12) </li>
-                <li onclick="exibir('geladeira')"> Geladeiras (3) </li>
-                <li onclick="exibir('fogao')"> Fogões (2) </li>
-                <li onclick="exibir('microondas')"> Microondas (3) </li>
-                <li onclick="exibir('lavaRoupa')"> Lavadoura de roupa (2) </li>
-                <li onclick="exibir('lavaLouca')"> Lava-louças (2) </li>
+            <ul class="lista navbar-nav ml-auto">
+                <li class="nav-item" onclick="exibirTodos()"> Todos (12) </li>
+                <li class="nav-item" onclick="exibir('geladeira')"> Geladeiras (3) </li>
+                <li class="nav-item" onclick="exibir('fogao')"> Fogões (2) </li>
+                <li class="nav-item" onclick="exibir('microondas')"> Microondas (3) </li>
+                <li class="nav-item" onclick="exibir('lavaRoupa')"> Lavadoura de roupa (2) </li>
+                <li class="nav-item" onclick="exibir('lavaLouca')"> Lava-louças (2) </li>
             </ul>
         </aside>
 

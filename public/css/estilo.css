@@ -139,7 +139,8 @@ nav .navbar {
   color: #a1057f;
 }
 
-.faleConos {
+#faleConos {
+  text-align: center;
   font-size: 26px;
   color: #a1057f;
 }
@@ -168,4 +169,13 @@ nav .navbar {
     width: 25vw;
     margin-left: 1px;
   }
+}
+
+#fale_form {
+  width: 37vw;
+}
+
+#text_form {
+  width: 37vw;
+  height: 30vh;
 }

@@ -28,7 +28,7 @@
 
         <br> <br>
 
-        <table class="lojas" cellpadding="20">
+        <table class="lojas table text-center my-0" cellpadding="20">
             <tr>
                 <td>
                     <h3> São Paulo </h3> <br>

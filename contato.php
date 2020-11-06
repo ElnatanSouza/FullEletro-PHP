@@ -28,9 +28,8 @@ include_once('conexaosql.php');
 
         <br> <br>
 
-        <center>
-            <p class="faleConos"> Fale Conosco </p>
-            <table>
+            <p id="faleConos"> Fale Conosco </p>
+            <table class="lojas table text-center my-0">
                 <tbody>
                     <tr>
                         <td>
@@ -45,21 +44,20 @@ include_once('conexaosql.php');
                     </tr>
                 </tbody>
             </table>
-        </center>
 
         <br> <br> <br>
-        <form method="post" action="#">
+        <form class="form-group" method="post" action="#">
             <h4 class="contato">
                 Nome Completo: <br>
-                <input id="fale_form" class="nome" type="text" name="nome" placeholder="Digite aqui seu nome">
+                <input id="fale_form" class="nome form-control" type="text" name="nome" placeholder="Digite aqui seu nome">
                 <br> Email:
                 <br>
-                <input id="fale_form" class="email" type="email" name="email" placeholder="Digite aqui seu email">
+                <input id="fale_form" class="email form-control" type="email" name="email" placeholder="Digite aqui seu email">
                 <br>
             </h4>
             <h4 class="mensagem">
                 Mensagem: <br>
-                <textarea id="fale_form" class="textarea" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br>
+                <textarea id="text_form" class="textarea form-control" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br>
 
                 <input id="fale_botao" class="botao" type="submit" value="Enviar"> <br>
             </h4>
