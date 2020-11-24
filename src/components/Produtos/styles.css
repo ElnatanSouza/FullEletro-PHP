@@ -1,0 +1,41 @@
+.categorias {
+  display: inline-block;
+  vertical-align: top;
+  width: 14%;
+  height: 900px;
+  margin: 0px 0px 0px 20px;
+}
+
+.paragrafoCateg {
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+}
+
+.lista {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.tamanhoprod {
+  cursor: zoom-in;
+}
+
+.prod {
+  display: inline-block;
+  width: 23%;
+  text-align: center;
+  margin: 15px 0px 0px 15px;
+}
+
+.preco {
+  color: red;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+#imgProd {
+  width: 120px;
+}
