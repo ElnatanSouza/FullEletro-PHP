@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './styles.css';
 
 const Menu = () => {
@@ -29,7 +28,7 @@ const Menu = () => {
                         </li>
                     </ul>
 
-                    <form className="form-inline my-2 my-lg-4" id="pesquisa">
+                    <form className="form-inline ml-5 my-2 my-lg-4" id="pesquisa">
                         <input className="form-control mr-sm-0" type="search" placeholder="Pesquisar" aria-label="Pesquisar" />
                         <button className="botao-nav btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
                     </form>

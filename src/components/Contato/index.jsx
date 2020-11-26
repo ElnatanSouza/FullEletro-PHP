@@ -46,9 +46,6 @@ const Contato = () => {
                     </h4>
 
                 </form>
-
-                <br /> 
-                <hr />
                 <br /> <br /> <br /> <br />
                 <hr />
                 <br /> <br /> <br /> <br />
