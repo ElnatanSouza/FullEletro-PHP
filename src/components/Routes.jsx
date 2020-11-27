@@ -10,8 +10,8 @@ import Contato from './Contato';
 const Routes = () => {
 
     return (
-        <BrowserRouter>            
-            <Switch>                
+        <BrowserRouter>      
+            <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/Produtos" component={Produtos} />
                 <Route path="/Lojas" component={Lojas} />

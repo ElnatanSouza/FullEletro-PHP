@@ -1,11 +1,3 @@
-.categorias {
-  display: inline-block;
-  vertical-align: top;
-  width: 14%;
-  height: 900px;
-  margin: 0px 0px 0px 20px;
-}
-
 .paragrafoCateg {
   font-weight: bolder;
   font-size: 25px;
@@ -19,13 +11,6 @@
 
 .tamanhoprod {
   cursor: zoom-in;
-}
-
-.prod {
-  display: inline-block;
-  width: 23%;
-  text-align: center;
-  margin: 15px 0px 0px 15px;
 }
 
 .preco {
