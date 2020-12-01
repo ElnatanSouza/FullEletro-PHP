@@ -1,8 +1,16 @@
 import React from 'react';
+import Produtos from '../Produtos';
 
 import './styles.css';
 
 const Contato = () => {
+    const [comentario, setComentario] = React.useState([])
+
+    React.useEffect(async () => {
+        const url = "http://localhost/fullstack_eletro/src/backend/coment.php"
+        const response = await fetch(url);
+        setComentario(await response.json());
+    }, [])
     return (
         <>
             <div className="container-fluid">
@@ -42,10 +50,24 @@ const Contato = () => {
                         Mensagem: <br />
                         <textarea id="text_form" className="textarea form-control" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br />
 
-                        <input id="fale_botao" className="botao" type="submit" value="Enviar" /> <br />
+                        <input id="fale_botao" className="botao btn text-light" type="submit" value="Enviar" /> <br />
                     </h4>
 
                 </form>
+
+                <div className="col">
+                    {comentario.map(element => {
+                        return (
+                            <div key={element.id} className="card mt-5 shadow w-50">
+                                <p> <b>Data: </b>{element.dia}</p> <br/>
+                                <p><b>Nome:</b> {element.nome} </p>
+                                <p><b>Email:</b> {element.email} </p>
+                                <p><b>Comentário:</b> {element.msg} </p>
+                            </div>
+                        )
+                    })} 
+                </div>
+                
                 <br /> <br /> <br /> <br />
                 <hr />
                 <br /> <br /> <br /> <br />

@@ -2,7 +2,7 @@
 
 require "./Models/Comentario.php";
 
-header("Access-Control_Allow_Origin:*");
+header("Access-Control-Allow-Origin:*");
 header("Content-type: application/json");
 
 $comentarios = Comentario::getAll();
