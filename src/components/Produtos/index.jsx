@@ -11,7 +11,7 @@ const Produtos = () => {
         setProduto(await response.json());
     }, [])
 
-    let destaque = (event) => {
+    const destaque = (event) => {
         if (event.target.style.width === "260px") {
             event.target.style.width = "120px";
         }
@@ -20,7 +20,7 @@ const Produtos = () => {
         }
     }
 
-    let redimensiona = (event) => {
+    const redimensiona = (event) => {
         if (event.target.style.width === "120px") {
             event.target.style.width = "260px";
         }
@@ -29,34 +29,47 @@ const Produtos = () => {
         }
     }
 
-    let exibirTodos = () => {
-        return null
+    let produt = document.getElementsByClassName('prod');
+
+    const exibir = (event) => {
+        let item = event.target.id;
+        console.log()
+
+        for (let i = 0; i < produt.length; i++) {
+            if (item == produt[i].id) {
+                produt[i].style.display = "inline-block";
+            } else {
+                produt[i].style.display = "none";
+            }
+        }
     }
 
-    let exibir = () => {
-        return null
+    const exibirTodos = () => {
+        for (let i = 0; i < produt.length; i++) {
+            produt[i].style.display = "inline-block";
+        }
     }
 
     return (
         <>
             <div className="container-fluid mt-5 row">
-                <aside className="col-lg-3">
+                <aside className="col-lg-3 col-sm-3">
                     <p className="paragrafoCateg"> Categorias </p>
                     <br />
                     <ul className="lista navbar-nav ml-auto">
                         <li className="nav-item" onClick={exibirTodos}> Todos (12) </li>
-                        <li className="nav-item" onClick={exibir('geladeira')}> Geladeiras (3) </li>
-                        <li className="nav-item" onClick={exibir('fogao')}> Fogões (2) </li>
-                        <li className="nav-item" onClick={exibir('microondas')}> Microondas (3) </li>
-                        <li className="nav-item" onClick={exibir('lavaRoupa')}> Lavadoura de roupa (2) </li>
-                        <li className="nav-item" onClick={exibir('lavaLouca')}> Lava-louças (2) </li>
+                        {produto.map(categoria => {
+                            return (
+                                <li id={categoria.id_categoria} className="nav-item" onClick={exibir}> {categoria.categoria} </li>
+                            )
+                        })}
                     </ul>
                 </aside>
-                <div className="col-lg-9">
+                <div className="col-lg-9 col-sm-9">
                     <div className="row">
                         {produto.map(element => {
                             return (
-                                <div key={element.id_produto} className="card border-0 col-lg-3" id="geladeira">
+                                <div key={element.id_produto} className="prod card border-0 col-lg-3 col-sm-3" id={element.id_categoria} >
                                     <img id="imgProd" className="tamanhoprod border-0 img-thumbnail" src={"/img/" + element.imagem} onMouseOver={destaque}
                                         onMouseOut={redimensiona} />
                                     <br />
@@ -73,7 +86,6 @@ const Produtos = () => {
                 <hr />
             </div>
             <hr />
-
         </>
     );
 }
