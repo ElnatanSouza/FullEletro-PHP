@@ -4,37 +4,55 @@ import './styles.css';
 
 const Contato = () => {
     const [comentario, setComentario] = React.useState([])
+    const [render, setRender] = React.useState(false);
+    const [msg, setMsg] = React.useState(false)
 
-    React.useEffect(async () => {
-        const url = "http://localhost/fullstack_eletro/src/backend/coment.php"
+    React.useEffect(() => {
+        async function fetchData(){
+        const url = "http://localhost/fullstack_eletro/src/backend/coment.php";
         const response = await fetch(url);
         setComentario(await response.json());
-    }, [])
+        }
+        fetchData();
+    }, [render])
+
+    function registerCommment(event) {
+        event.preventDefault();
+        const url = "http://localhost/fullstack_eletro/src/backend/register-comment.php";
+
+        fetch(url, {
+            method: "POST",
+            body: new FormData(event.target)
+        }).then((response) => response.json())
+            .then((dados) => {
+                setRender(!render);
+                setMsg(dados);
+                setTimeout(() => {
+                    setMsg(false)
+                }, 3000);
+            })
+    }
+
     return (
         <>
             <div className="container-fluid">
                 <br /> <br />
 
                 <p id="faleConos"> Fale Conosco </p>
-                <table className="lojas text-center my-0">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="./img/whats.png" alt="Logo WhatsApp" title="Imagem WhatsApp" id="logoContato" />
+
+                <div className="lojas text-center my-0">
+
+                    <img src="./img/whats.png" alt="Logo WhatsApp" title="Imagem WhatsApp" id="logoContato" />
                                 (11)
                                 98887-9788 | | (11) 95293-5270
-                            </td>
-                            <td>
-                                <img src="./img/email.png" alt="Logo Email" title="Imagem Email" id="logoContato" />
+                    <img src="./img/email.png" alt="Logo Email" title="Imagem Email" id="logoContato" />
                                 contato@fullstackeletro.com.br || vendas@fullstackeletro.com
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                </div>
 
                 <br /><br /><br />
 
-                <form className="form-group" method="post" action="#">
+                <form className="form-group" onSubmit={registerCommment}>
 
                     <h4 className="contato">
                         Nome Completo: <br />
@@ -54,19 +72,25 @@ const Contato = () => {
 
                 </form>
 
+                {msg &&
+                    <div className="alert alert-success mx-auto mt-4 w-75" role="alert">
+                        Comentário efetuado com sucesso!
+                    </div>
+                }
+
                 <div className="col">
                     {comentario.map(element => {
                         return (
                             <div key={element.id} className="card mt-5 shadow w-50">
-                                <p> <b>Data: </b>{element.dia}</p> <br/>
+                                <p> <b>Data: </b>{element.dia}</p> <br />
                                 <p><b>Nome:</b> {element.nome} </p>
                                 <p><b>Email:</b> {element.email} </p>
                                 <p><b>Comentário:</b> {element.msg} </p>
                             </div>
                         )
-                    })} 
+                    })}
                 </div>
-                
+
                 <br /> <br /> <br /> <br />
                 <hr />
                 <br /> <br /> <br /> <br />
@@ -75,7 +99,7 @@ const Contato = () => {
 
         </>
 
-    );  
-}   
+    );
+}
 
 export default Contato;

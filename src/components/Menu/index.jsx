@@ -24,13 +24,13 @@ const Menu = () => {
 
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" title="Página de produtos" to="../Produtos">Produtos</Link>
+                                <Link className="nav-link" title="Página de produtos" to="/Produtos">Produtos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" title="Nossas lojas" to="../Lojas">Nossas Lojas</Link>
+                                <Link className="nav-link" title="Nossas lojas" to="/Lojas">Nossas Lojas</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" title="Fale conosco" to="../Contato">Contato</Link>
+                                <Link className="nav-link" title="Fale conosco" to="/Contato">Contato</Link>
                             </li>
                         </ul>
 
@@ -42,10 +42,10 @@ const Menu = () => {
                     </div>
                 </nav>
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/Produtos" component={Produtos} />
-                    <Route path="/Lojas" component={Lojas} />
-                    <Route path="/Contato" component={Contato} />
+                    <Route path="/" exact component={ Home } />
+                    <Route path="/Produtos" component={ Produtos } />
+                    <Route path="/Lojas" component={ Lojas } />
+                    <Route path="/Contato" component={ Contato } />
                     <Route component={() => <div><h1>Page 404!</h1></div>} />
                 </Switch>
             </BrowserRouter>
