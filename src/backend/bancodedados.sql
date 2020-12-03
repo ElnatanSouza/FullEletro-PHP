@@ -25,6 +25,14 @@ marca varchar(20) not null
 
 ) default charset = utf8;
 
+create table categorias (
+
+id_categoria int not null,
+categoria varchar(60) not
+
+
+) default charset = utf8;
+
 
 insert into produtos values
 
