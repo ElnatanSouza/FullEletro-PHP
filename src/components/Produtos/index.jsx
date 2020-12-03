@@ -3,28 +3,29 @@ import React from 'react';
 import './styles.css';
 
 const Produtos = () => {
-    const [produto, setProduto] = React.useState([]);
+    const [produto, setProduto] = React.useState([])
 
     React.useEffect(() => {
         async function fetchData() {
             const url = "http://localhost/fullstack_eletro/src/backend/prod.php";
-            const response = await fetch(url);
-            setProduto(await response.json());
+            const response = await fetch(url)
+            setProduto(await response.json())
         } fetchData();
     }, [])
 
-    // setCat(produto.filter((element, i) => element.indexOf(i) === i));
-    // console.log(produto.filter((element, index) => element.indexOf(element.categoria) === index))
+    const cat = produto.map(cat => {
+        const container = {}
+        container['id'] = cat.id_categoria
+        container['name'] = cat.categoria
+        return container
+    })
 
-
-    // var arr = [{nome: "Gui"}, {nome: "Gui"}, {nome: "Elnatan"}];
-    // var novaArr = arr.filter((este, i) => arr.indexOf(este) === i);
-    // console.log(novaArr); //dá ['foo', 'bar']
-
-    // var original = [{a:1}, {a:1}, {a:2}, {a:3}, {a:1}, {a:2}, {a:5}];
-    //removing duplicates values from container
-
-
+    const categoriaFinal = cat.map(JSON.stringify)
+    .reverse()
+    .filter(function(item, index, arr){
+        return arr.indexOf(item, index +1) === -1
+    }).reverse()
+    .map(JSON.parse)
 
     const destaque = (event) => {
         if (event.target.style.width === "260px") {
@@ -66,19 +67,22 @@ const Produtos = () => {
     return (
         <>
             <div className="container-fluid mt-5 row">
+                {/* Parte de categoria */}
                 <aside className="col-lg-3 col-sm-3">
                     <p className="paragrafoCateg"> Categorias </p>
                     <br />
                     <ul className="lista navbar-nav ml-auto">
                         <li className="nav-item" onClick={exibirTodos}> <b> Todos </b> </li>
 
-                        {produto.map(categoria => {
+                        {categoriaFinal.map(categoria => {
                             return (
-                                <li key={categoria.id_produto} id={categoria.id_categoria} className="nav-item" onClick={exibir}> {categoria.categoria} </li>
+                                <li key={categoria.id} id={categoria.id} className="nav-item" onClick={exibir}> {categoria.name} </li>
                             )
                         })}
                     </ul>
                 </aside>
+
+                {/* Parte de produtos */}
 
                 <div className="col-lg-9 col-sm-9">
                     <div className="row">
