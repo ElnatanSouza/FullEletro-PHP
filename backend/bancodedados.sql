@@ -57,9 +57,20 @@ insert into produtos values
         (default,'4','lavaRoupa','Lavadora de Roupas Brastemp com Turbo Agitação - 220V (11kg)','2.056,97','1.719,99','lavroupa1.jpg','Brastemp'),
         (default,'5','lavaLouca','Lava-Louças Inox 14 Serviços - 220V','3.548,79','2.233,25','lavlouça.jpg','Inox'),
         (default,'5','lavaLouca','Lava-louças 8 Serviços Brastemp Ative! - 220V','2.368,79','1.804,85','lavlouça1.jpg','Brastemp');
-
-
-
-
-
         
+
+CREATE VIEW info_produtos AS 
+
+SELECT id_produto, 
+categoria,
+descricao_produto,
+preco_real,
+preco_desc,
+marca
+from produtos;
+
+CREATE VIEW info_categoria AS
+
+SELECT id_categoria,
+categoria 
+FROM categorias;

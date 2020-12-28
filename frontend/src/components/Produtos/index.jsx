@@ -7,7 +7,7 @@ const Produtos = () => {
 
     React.useEffect(() => {
         async function fetchData() {
-            const url = "http://localhost/fullstack_eletro/src/backend/prod.php";
+            const url = "http://localhost/fullstack_eletro/backend/prod.php";
             const response = await fetch(url)
             setProduto(await response.json())
         } fetchData();
@@ -69,8 +69,7 @@ const Produtos = () => {
             <div className="container-fluid mt-5 row">
                 {/* Parte de categoria */}
                 <aside className="col-lg-3 col-sm-3">
-                    <p className="paragrafoCateg"> Categorias </p>
-                    <br />
+                    <p className="paragrafoCateg mb-4"> Categorias </p>
                     <ul className="lista navbar-nav ml-auto">
                         <li className="nav-item" onClick={exibirTodos}> <b> Todos </b> </li>
 
@@ -91,11 +90,8 @@ const Produtos = () => {
                                 <div key={element.id_produto} className="prod card border-0 col-lg-3 col-sm-3" id={element.id_categoria} >
                                     <img id="imgProd" className="tamanhoprod border-0 img-thumbnail" alt={""} src={'/img/' + element.imagem} onMouseOver={destaque}
                                         onMouseOut={redimensiona} />
-                                    <br />
                                     <p className="card-text"> {element.descricao_produto + " " + element.marca} </p>
-                                    <br />
                                     <p className="strike"> R$ {element.preco_real}  </p>
-                                    <br />
                                     <p className="preco"> R$ {element.preco_desc}  </p>
                                 </div>
                             )

@@ -8,17 +8,17 @@ const Contato = () => {
     const [msg, setMsg] = React.useState(false)
 
     React.useEffect(() => {
-        async function fetchData(){
-        const url = "http://localhost/fullstack_eletro/src/backend/coment.php";
-        const response = await fetch(url);
-        setComentario(await response.json());
+        async function fetchData() {
+            const url = "http://localhost/fullstack_eletro/backend/coment.php";
+            const response = await fetch(url);
+            setComentario(await response.json());
         }
         fetchData();
     }, [render])
 
     function registerCommment(event) {
         event.preventDefault();
-        const url = "http://localhost/fullstack_eletro/src/backend/register-comment.php";
+        const url = "http://localhost/fullstack_eletro/backend/register-comment.php";
 
         fetch(url, {
             method: "POST",
@@ -35,43 +35,29 @@ const Contato = () => {
 
     return (
         <>
-            <div className="container-fluid">
-                <br /> <br />
-
-                <p id="faleConos"> Fale Conosco </p>
-
-                <div className="lojas text-center my-0">
-
+            <div className="container-fluid mt-5">
+                <p className="mb-4" id="faleConos"> Fale Conosco </p>
+                <div className="lojas text-center mb-5">
                     <img src="./img/whats.png" alt="Logo WhatsApp" title="Imagem WhatsApp" id="logoContato" />
-                                (11)
-                                98887-9788 | | (11) 95293-5270
+                        (11) 98887-9788 | | (11) 95293-5270
                     <img src="./img/email.png" alt="Logo Email" title="Imagem Email" id="logoContato" />
-                                contato@fullstackeletro.com.br || vendas@fullstackeletro.com
-
+                        contato@fullstackeletro.com.br || vendas@fullstackeletro.com
                 </div>
-
-                <br /><br /><br />
-
                 <form className="form-group" onSubmit={registerCommment}>
 
                     <h4 className="contato">
-                        Nome Completo: <br />
-                        <input id="fale_form" className="nome form-control" type="text" name="nome" placeholder="Digite aqui seu nome" />
-                        <br /> Email:
-                        <br />
-                        <input id="fale_form" className="email form-control" type="email" name="email" placeholder="Digite aqui seu email" />
-                        <br />
+                        Nome Completo:
+                        <input id="fale_form" className="nome form-control mt-2 mb-3" type="text" name="nome" placeholder="Digite aqui seu nome" />
+                        Email:
+                        <input id="fale_form" className="email form-control mt-2 mb-3" type="email" name="email" placeholder="Digite aqui seu email" />
                     </h4>
-
                     <h4 className="mensagem">
-                        Mensagem: <br />
-                        <textarea id="text_form" className="textarea form-control" name="msg" placeholder="Digite sua mensagem aqui"></textarea> <br />
-
-                        <input id="fale_botao" className="botao btn text-light" type="submit" value="Enviar" /> <br />
+                        Mensagem:
+                        <textarea id="text_form" className="textarea form-control mt-2" name="msg" placeholder="Digite sua mensagem aqui"></textarea>
+                        <input id="fale_botao" className="botao btn text-light mt-2 mb-3" type="submit" value="Enviar" />
                     </h4>
 
                 </form>
-
                 {msg &&
                     <div className="alert alert-success mx-auto mt-4 w-75" role="alert">
                         Comentário efetuado com sucesso!
@@ -90,13 +76,8 @@ const Contato = () => {
                         )
                     })}
                 </div>
-
-                <br /> <br /> <br /> <br />
-                <hr />
-                <br /> <br /> <br /> <br />
-
+                <hr className="mt-5 mb-5" />
             </div>
-
         </>
 
     );
